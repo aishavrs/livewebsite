@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landlord Application Form</title>
+  <style>
+    footer {
+      background-color: #f9f9f9;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-input {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-submit {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 10px;
+      }
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Landlord Application Form</h2>
+    <form id="applicationForm" action="https://formspree.io/f/xrgwbzqp" method="POST">
+      <div class="form-group">
+        <label class="form-label" for="fullName">Your full name:</label>
+        <input class="form-input" type="text" id="fullName" name="fullName" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="currentAddress">Current Address:</label>
+        <input class="form-input" type="text" id="currentAddress" name="currentAddress" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="phoneNumber">Phone Number:</label>
+        <input class="form-input" type="tel" id="phoneNumber" name="phoneNumber" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="state">State:</label>
+        <input class="form-input" type="text" id="state" name="state" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="city">City:</label>
+        <input class="form-input" type="text" id="city" name="city" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="zip">Zip:</label>
+        <input class="form-input" type="text" id="zip" name="zip" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="married">Are you married?</label>
+        <select class="form-input" id="married" name="married" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="kids">Do you have kids?</label>
+        <select class="form-input" id="kids" name="kids" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="car">Do you have a car?</label>
+        <select class="form-input" id="car" name="car" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="pet">Do you have a pet?</label>
+        <select class="form-input" id="pet" name="pet" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="occupation">Occupation:</label>
+        <input class="form-input" type="text" id="occupation" name="occupation" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="numPeople">How many people will be living in the house?</label>
+        <input class="form-input" type="number" id="numPeople" name="numPeople" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="reasons">Reasons for leaving present home:</label>
+        <textarea class="form-input" id="reasons" name="reasons" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="leaseLength">How long lease are you looking for?</label>
+        <input class="form-input" type="text" id="leaseLength" name="leaseLength" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="moveInDate">How soon do you intend moving in?</label>
+        <input class="form-input" type="text" id="moveInDate" name="moveInDate" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="dob">Date of Birth:</label>
+        <input class="form-input" type="text" id="dob" name="dob" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="numCars">Number of Cars:</label>
+        <input class="form-input" type="number" id="numCars" name="numCars" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="occupantPicture">A picture of occupant:</label>
+        <input class="form-input" type="file" id="occupantPicture" name="occupantPicture" accept="image/*" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="paymentTiming">How soon are you making the payment?</label>
+        <input class="form-input" type="text" id="paymentTiming" name="paymentTiming" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="keyTiming">How soon do you want to receive the keys/documents?</label>
+        <input class="form-input" type="text" id="keyTiming" name="keyTiming" required>
+      </div>
+      <div class="form-group">
+            <label class="form-label">Application Fee:</label>
+            <div>
+              <label>
+                <input type="radio" name="paymentMethod" value="zelle" required>
+                Zelle
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="paymentMethod" value="cashapp">
+                CashApp
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="paymentMethod" value="paypal">
+                PayPal
+              </label>
+              <br>
+              <label>
+                <input type="radio" name="paymentMethod" value="other">
+                Other
+              </label>
+            </div>
+    
+          <div class="form-group">
+            <label class="form-label" for="otherPayment">Other Payment Method:</label>
+            <textarea class="form-input" id="otherPayment" name="otherPayment" rows="4"></textarea>
+          </div>
+      <div class="form-group">
+        <label class="form-label" for="comment">Comment:</label>
+        <textarea class="form-input" id="comment"></textarea>
+      </div>
+      <div>
+          <h5>Please make sure these questions are filled correctly because the best way you answer with your comments will impress us the most to accept your application. </h5>
+          <h5>I await your reply. <br> Your Sincerely.</h5>
+      </div>
+      <div class="form-group">
+        <button class="form-submit" type="submit">Submit</button>
+      </div>
+      </div>
+      <footer>
+        <p>&copy; Crushman Group. All rights reserved.</p>
+      </footer>
+
+
+<script>
+    document.getElementById("applicationForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+
+      var fullName = document.getElementById("fullName").value;
+      var currentAddress = document.getElementById("currentAddress").value;
+      var phoneNumber = document.getElementById("phoneNumber").value;
+      var state = document.getElementById("state").value;
+      var city = document.getElementById("city").value;
+      var zip = document.getElementById("zip").value;
+      var married = document.getElementById("married").value;
+      var kids = document.getElementById("kids").value;
+      var car = document.getElementById("car").value;
+      var pet = document.getElementById("pet").value;
+      var occupation = document.getElementById("occupation").value;
+      var numPeople = document.getElementById("numPeople").value;
+      var reasons = document.getElementById("reasons").value;
+      var leaseLength = document.getElementById("leaseLength").value;
+      var moveInDate = document.getElementById("moveInDate").value;
+      var dob = document.getElementById("dob").value;
+      var numCars = document.getElementById("numCars").value;
+      var occupantPicture = document.getElementById("occupantPicture").value;
+      var paymentTiming = document.getElementById("paymentTiming").value;
+      var keyTiming = document.getElementById("keyTiming").value;
+      var applicationFee = document.getElementById("applicationFee").value;
+      var comment = document.getElementById("comment").value;
+  
+      var formData = "Full Name: " + fullName + "\n" +
+                     "Current Address: " + currentAddress + "\n" +
+                     "Phone Number: " + phoneNumber + "\n" +
+                     "State: " + state + "\n" +
+                     "City: " + city + "\n" +
+                     "Zip: " + zip + "\n" +
+                     "Are you married?: " + married + "\n" +
+                     "Do you have kids?: " + kids + "\n" +
+                     "Do you have a car?: " + car + "\n" +
+                     "Do you have a pet?: " + pet + "\n" +
+                     "Occupation: " + occupation + "\n" +
+                     "Number of People: " + numPeople + "\n" +
+                     "Reasons for living present home: " + reasons + "\n" +
+                     "Lease Length: " + leaseLength + "\n" +
+                     "Move-in Date: " + moveInDate + "\n" +
+                     "Date of Birth: " + dob + "\n" +
+                     "Number of Cars: " + numCars + "\n" +
+                     "Payment Timing: " + paymentTiming + "\n" +
+                     "Key Timing: " + keyTiming + "\n" +
+                     "Application Fee: " + applicationFee + "\n" +
+                     "Comment: " + comment;
+      alert("Form data:\n\n" + formData);
+
+      var selectedPaymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+      if (selectedPaymentMethod === "other") {
+        var otherPayment = document.getElementById("otherPayment").value;
+        formData += "Other Payment Method: " + otherPayment + "\n";
+      } else {
+        formData += "Payment Method: " + selectedPaymentMethod + "\n";
+      }
+
+    var emailAddress = "asapmove39@gmail.com;
+    var subject = "New Application Form Submission";
+    var mailtoLink = "mailto:" + emailAddress + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(formData);
+    window.location.href = mailtoLink;
+  
+      document.getElementById("applicationForm").reset();
+    });
+  </script>
+  
